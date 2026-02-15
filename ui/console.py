@@ -1,29 +1,31 @@
 from monitor import collector
-import time
-import os
-import platform
+import tkinter as tk
+from tkinter import ttk
 
-os_name = platform.system()
-
-def run():
-    while True:
-        metrics = collector.collect_metrics()
-        cpu_usage = list(metrics.values())[0]
-        
-        print("SYSTEM USAGE")
-        print("============")
-        print(f"CPU: {cpu_usage}%")
-        print("============")
-        for key, value in metrics['memory'].items():
-            if key != "percent":
-                value = value / (1024**3)
-                print(f"Memory {key}: {value:.2f} GB")
-            else:
-                print(f"Memory {key}: {value}%")
-
-        
-        time.sleep(1)
-        if os_name == "Windows":
-            os.system("cls")
+def update_metrics():
+    metrics = collector.collect_metrics()
+    
+    cpu_label.config(text=f"CPU Usage: {metrics['cpu']}%")
+    
+    memory_text = ""
+    for key, value in metrics['memory'].items():
+        if key != "percent":
+            value = value / (1024**3)
+            memory_text += f"{key.capitalize()}: {value:.2f} GB\n"
         else:
-            os.system("clear")
+            memory_text += f"{key.capitalize()}: {value}%\n"
+    memory_label.config(text=memory_text)
+    root.after(1000, update_metrics)
+
+root = tk.Tk()
+root.title("System Metrics")
+root.geometry("300x200")
+
+cpu_label = ttk.Label(root, text="CPU Usage: ", font=("Arial", 12))
+cpu_label.pack(pady=10)
+
+memory_label = ttk.Label(root, text="Memory Usage: ", font=("Arial", 12))
+memory_label.pack(pady=10)
+
+update_metrics()
+root.mainloop()
