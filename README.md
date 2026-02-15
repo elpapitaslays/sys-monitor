@@ -2,6 +2,9 @@
 
 Used primarily for monitoring your PC's CPU/RAM in a simple way by just running the main.py file or converting it to an executable file.
 
+### MENU EXAMPLE
+![menuex](https://imgur.com/a/WF1GxmE)
+
 ## DEPENDENCIES
 Actual dependencies are (I'll update them if I add more):
 - Python 3 or later
@@ -9,7 +12,7 @@ Actual dependencies are (I'll update them if I add more):
 - tkinter (it should come with Python)
 - psutil (pip install psutil)
 
-![dependencies](https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.activestate.com%2Fresources%2Fquick-reads%2Fhow-to-download-python-dependencies%2F&ved=0CBYQjRxqFwoTCLiWtqqx3JIDFQAAAAAdAAAAABAI&opi=89978449)
+![dependencies](https://cdn.activestate.com/wp-content/uploads/2020/08/how-to-download-Python-dependencies.png)
 
 ## HOW TO USE
 
