@@ -16,7 +16,12 @@ def run():
         print(f"CPU: {cpu_usage}%")
         print("============")
         for key, value in metrics['memory'].items():
-            print(f"Memory {key}: {value}")
+            if key != "percent":
+                value = value / (1024**3)
+                print(f"Memory {key}: {value:.2f} GB")
+            else:
+                print(f"Memory {key}: {value}%")
+
         
         time.sleep(1)
         if os_name == "Windows":
