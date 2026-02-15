@@ -3,7 +3,7 @@
 Used primarily for monitoring your PC's CPU/RAM in a simple way by just running the main.py file or converting it to an executable file.
 
 ### MENU EXAMPLE
-![menuex](https://imgur.com/a/WF1GxmE)
+![menuex](https://i.imgur.com/HZBiIri.png)
 
 ## DEPENDENCIES
 Actual dependencies are (I'll update them if I add more):
