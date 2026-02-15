@@ -15,7 +15,8 @@ def run():
         print("============")
         print(f"CPU: {cpu_usage}%")
         print("============")
-        print(f"MEMORY: {total_memory}")
+        for key, value in metrics['memory'].items():
+            print(f"Memory {key}: {value}")
         
         time.sleep(1)
         if os_name == "Windows":
