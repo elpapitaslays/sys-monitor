@@ -9,8 +9,7 @@ def run():
     while True:
         metrics = collector.collect_metrics()
         cpu_usage = list(metrics.values())[0]
-        total_memory = list(metrics.values())[1]
-
+        
         print("SYSTEM USAGE")
         print("============")
         print(f"CPU: {cpu_usage}%")
