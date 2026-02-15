@@ -7,5 +7,3 @@ def collect_metrics():
         "memory": memory.get_memory_usage()
     }
     return collection
-
-print(collect_metrics())
