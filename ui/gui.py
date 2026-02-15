@@ -19,7 +19,7 @@ def update_metrics():
 
 root = tk.Tk()
 root.title("System Metrics")
-root.geometry("300x200")
+root.geometry("400x300")
 
 cpu_label = ttk.Label(root, text="CPU Usage: ", font=("Arial", 12))
 cpu_label.pack(pady=10)
