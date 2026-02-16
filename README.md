@@ -9,7 +9,7 @@ Used primarily for monitoring your PC's CPU/RAM in a simple way by just running 
 Actual dependencies are (I'll update them if I add more):
 - Python 3 or later
 - pip (pip install pip)
-- tkinter (it should come with Python)
+- tkinter (it shall come with Python)
 - psutil (pip install psutil)
 
 ![dependencies](https://cdn.activestate.com/wp-content/uploads/2020/08/how-to-download-Python-dependencies.png)
