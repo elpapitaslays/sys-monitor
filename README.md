@@ -1,6 +1,6 @@
 # SYSTEM MONITOR APP
 
-Used primarily for monitoring your PC's CPU/RAM in a simple way by just running the main.py file or converting it to an executable file.
+Used primarily for monitoring your PC's CPU/RAM/DISK in a simple way by just running the main.py file or converting it to an executable file.
 
 ### MENU EXAMPLE
 ![menuex](https://i.imgur.com/HZBiIri.png)
