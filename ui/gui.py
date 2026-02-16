@@ -15,6 +15,16 @@ def update_metrics():
         else:
             memory_text += f"{key.capitalize()}: {value}%\n"
     memory_label.config(text=memory_text)
+
+    disk_text = ""
+    for key, value in metrics['disk'].items():
+        if key != "percent":
+            value = value / (1024**3)
+            disk_text += f"{key.capitalize()}: {value:.2f} GB\n"
+        else:
+            disk_text += f"{key.capitalize()}: {value}%\n"
+    disk_label.config(text=disk_text)
+
     root.after(1000, update_metrics)
 
 root = tk.Tk()
@@ -26,6 +36,9 @@ cpu_label.pack(pady=10)
 
 memory_label = ttk.Label(root, text="Memory Usage: ", font=("Arial", 12))
 memory_label.pack(pady=10)
+
+disk_label = ttk.Label(root, text="Disk Usage: ", font=("Arial", 12))
+disk_label.pack(pady=10)
 
 update_metrics()
 root.mainloop()
